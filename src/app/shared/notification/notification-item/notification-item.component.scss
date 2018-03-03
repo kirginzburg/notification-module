@@ -1,0 +1,72 @@
+.notification-block {
+    position: relative;
+    padding: 10px 0px 10px 10px;
+    line-height: 30px;
+    background-color: #FFFFFF;
+    height: 120px;
+    width: 450px;
+    transition: background-color 1000ms linear;
+
+    &.unread{
+        background-color: gray;
+    }
+
+    .notification-icon {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-size: 100% 100%;
+
+        &.warning {
+            background-image: url('img/warning.png');
+        }
+
+        &.info {
+            background-image: url('img/info.png');
+        }
+
+        &.error {
+            background-image: url('img/error.png');
+        }
+    }
+
+    .notification-text-container {
+        padding-left: 60px;
+        padding-right: 30px;
+        
+
+        .notification-title{
+            height: 30px;
+            overflow: hidden;
+            font-size: 16pt;
+        }
+
+        .notification-message{
+            display: inline-block;
+            width: 350px;
+            height: 50px;
+            line-height: 1.2em;
+            font-size: 10pt;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .notification-time{
+            color: gray
+        }
+    }
+    
+    
+
+    .btn-close {
+        position: absolute;
+        background-image: url(img/delete.png);
+        width: 20px;
+        height: 20px;
+        background-size: 100% 100%;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+}

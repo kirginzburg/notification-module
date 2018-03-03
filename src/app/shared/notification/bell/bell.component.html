@@ -1,0 +1,3 @@
+<div (click)="click()" class="bell" [ngClass]="{ 'bell-on': unreadNotificationCount > 0, 'bell-off': unreadNotificationCount === 0 }">
+    <div class="bell-count" *ngIf="unreadNotificationCount > 0">{{unreadNotificationCount}}</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="notification">
+    <cc-bell (bellClick)="bellClick()"></cc-bell>
+    <div *ngIf="showNotifications" class="notification-wrap">
+        <div class="shadow-container">
+            <cc-notification-item *ngFor="let item of itemsToShow" [item]="item" (close)="itemClose(item)"></cc-notification-item>
+            <div class="no-notification" *ngIf = "itemsToShow.length === 0">
+                <div class="no-notification-icon">
+
+                </div>
+                <div class="no-notification-content">
+                    No notification are found
+                </div>
+            </div>
+            <div class="show-all" *ngIf="items.length > 5" (click)="showAllClick()">
+                <span *ngIf="!showAll">Show All Messages</span>
+                <span *ngIf="showAll">Hide</span>
+            </div>
+        </div>
+    </div>
+</div>

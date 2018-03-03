@@ -1,0 +1,25 @@
+<div class="notification-block" [ngClass]="{unread: item.unread}">
+    <div class="notification-icon" [ngClass]= "
+        { 
+            warning: item.type === notificationType.Warning,
+            info: item.type === notificationType.Info,
+            error: item.type === notificationType.Error
+        }"></div>
+
+    <div class="notification-text-container">
+
+        <div class="notification-title">
+            {{item.title}}
+        </div>
+        <div class="notification-message">
+            {{item.message}}
+        </div>
+
+        <div class="notification-time">
+            {{item.createDate | date:'short'}}
+        </div>
+
+    </div>
+
+    <div class="btn-close" (click)="close.emit()"></div>
+</div>

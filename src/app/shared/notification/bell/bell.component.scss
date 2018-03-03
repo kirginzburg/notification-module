@@ -1,0 +1,31 @@
+.bell {
+    background-size: 100% 100%;
+    user-select: none; 
+    width: 30px;
+    height: 30px;
+    position: relative;
+
+    &.bell-off {
+        background-image: url('/img/alert-off.png');
+    }
+
+    &.bell-on {
+        background-image: url('/img/alert-on.png');
+    }
+
+    .bell-count {
+        border: 2px solid white;
+        background-color: red;
+        border-radius: 12px;
+        position: absolute;
+        padding: 1px 4px;
+        color: #fff;
+        font-size: 10px;
+        height: 11px;
+        line-height: 11px;
+        min-width: 5px;
+        top: 4px;
+        left: 16px;
+        text-align: center;
+    }   
+}

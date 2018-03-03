@@ -1,0 +1,44 @@
+.notification {
+    position: relative;
+
+    .notification-wrap {
+        position: absolute;
+        box-shadow: 2px 4px 6px -1px rgba(105, 105, 105, 0.49);
+        max-height: 740px;
+        overflow: auto;
+    }
+
+    .show-all{
+        position: relative;
+        background-color: #FFFFFF;
+        color: darkblue;
+        cursor: pointer;
+        text-decoration: underline;
+        text-align: center;
+        height: 30px;
+        width: 460px;
+    }
+
+    .no-notification{
+        position: relative;
+        background-color: #FFFFFF;
+        text-align: center;
+        height: 300px;
+        width: 460px;
+
+        .no-notification-icon {
+            left: 180px;
+            top: 80px;
+            width: 70px;
+            height: 70px;
+            position: absolute;
+            background-size: 100% 100%;
+            background-image: url('img/empty.png');
+        }
+        
+        .no-notification-content {
+            padding-top: 160px;
+            color: lightgray
+        }
+    }
+}

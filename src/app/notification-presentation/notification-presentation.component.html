@@ -1,0 +1,21 @@
+<div class="notification-container">
+    <cc-notification></cc-notification>
+</div>
+<div>           
+    <input [(ngModel)]="notification.title" placeholder="title"/>
+</div>
+<div>           
+    <textarea [(ngModel)]="notification.text" placeholder="text"></textarea>
+</div>
+<div>
+    <select [(ngModel)]="notification.type">
+        <option [ngValue]="1">Info</option>
+        <option [ngValue]="2">Warning</option>
+        <option [ngValue]="3">Error</option>
+    </select>
+</div>
+
+<div>
+    <input type="button" value="Add Message" (click)="addNotification()">
+</div>
+
